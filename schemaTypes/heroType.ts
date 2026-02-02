@@ -28,43 +28,6 @@ export const heroType = defineType({
     }),
 
     defineField({
-      name: 'admissionOpen',
-      title: 'Admission Open?',
-      type: 'boolean',
-      initialValue: false,
-    }),
-
-    defineField({
-      name: 'admissionAction',
-      title: 'Admission Enquiry',
-      type: 'object',
-      fields: [
-        {name: 'label', type: 'string'},
-        {name: 'href', type: 'url'},
-      ],
-    }),
-
-    defineField({
-      name: 'exploreAction',
-      title: 'Explore Our School (Shared)',
-      type: 'object',
-      fields: [
-        {name: 'label', type: 'string'},
-        {name: 'href', type: 'url'},
-      ],
-    }),
-
-    defineField({
-      name: 'contactAction',
-      title: 'Contact Us',
-      type: 'object',
-      fields: [
-        {name: 'label', type: 'string'},
-        {name: 'href', type: 'url'},
-      ],
-    }),
-
-    defineField({
       name: 'slides',
       title: 'Carousel Slides',
       type: 'array',
