@@ -1,6 +1,6 @@
-import {defineType, defineField} from 'sanity'
+import { defineType, defineField } from 'sanity'
 
-export const statsType = defineType({
+export const stats = defineType({
   name: 'statsSection',
   title: 'Stats Section',
   type: 'document',

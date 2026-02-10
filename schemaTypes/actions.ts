@@ -1,6 +1,6 @@
-import {defineType, defineField} from 'sanity'
+import { defineType, defineField } from 'sanity'
 
-export const actionsType = defineType({
+export const actions = defineType({
   name: 'actions',
   title: 'Actions',
   type: 'document',
@@ -20,31 +20,19 @@ export const actionsType = defineType({
     defineField({
       name: 'admissionAction',
       title: 'Admission Enquiry',
-      type: 'object',
-      fields: [
-        {name: 'label', type: 'string'},
-        {name: 'href', type: 'url'},
-      ],
+      type: 'link',
     }),
 
     defineField({
       name: 'exploreAction',
       title: 'Explore Our School (Shared)',
-      type: 'object',
-      fields: [
-        {name: 'label', type: 'string'},
-        {name: 'href', type: 'url'},
-      ],
+      type: 'link',
     }),
 
     defineField({
       name: 'contactAction',
       title: 'Contact Us',
-      type: 'object',
-      fields: [
-        {name: 'label', type: 'string'},
-        {name: 'href', type: 'url'},
-      ],
+      type: 'link',
     }),
   ],
 })

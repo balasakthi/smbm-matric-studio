@@ -1,28 +1,32 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 
-export const heroType = defineType({
+export const hero = defineType({
   name: 'heroSection',
   title: 'Hero Section',
   type: 'document',
   fields: [
     defineField({
       name: 'title',
+      title: 'Title',
       type: 'string',
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'subtitle',
+      title: 'Subtitle',
       type: 'string',
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'description',
+      title: 'Description',
       type: 'text',
       rows: 3,
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'trustLine',
+      title: 'Trust Line',
       type: 'string',
       validation: (rule) => rule.required(),
     }),
@@ -31,21 +35,7 @@ export const heroType = defineType({
       name: 'slides',
       title: 'Carousel Slides',
       type: 'array',
-      of: [
-        {
-          type: 'image',
-          options: {
-            hotspot: true,
-          },
-          fields: [
-            {
-              name: 'alt',
-              type: 'string',
-              title: 'Alternative text',
-            },
-          ],
-        },
-      ],
+      of: [{ type: 'accessibleImage' }],
       validation: (rule) => rule.required().min(1),
     }),
 
@@ -57,8 +47,17 @@ export const heroType = defineType({
         {
           type: 'object',
           fields: [
-            {name: 'icon', type: 'string'},
-            {name: 'text', type: 'string'},
+            {
+              name: 'icon',
+              type: 'string',
+              title: 'Icon Name',
+              description: 'Name of the icon from the icon library',
+            },
+            {
+              name: 'text',
+              type: 'string',
+              title: 'Highlight Text',
+            },
           ],
         },
       ],

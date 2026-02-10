@@ -1,23 +1,38 @@
-import {callToActionType} from './callToActionType'
-import {aboutType} from './aboutType'
-import {academicType} from './academicType'
-import {featureItem} from './featureItem'
-import {heroType} from './heroType'
-import {messageType} from './messageType'
-import {statsType} from './statsType'
-import {updatesType} from './updatesType'
-import {whyChooseType} from './whyChooseType'
-import {actionsType} from './actionsType'
+import { about } from './about'
+import { academic } from './academic'
+import { accessibleImage } from './objects/accessibleImage'
+import { actions } from './actions'
+import { admissionGuidelines } from './admissionGuidelines'
+import { admissionProcess } from './admissionProcess'
+import { callToAction } from './callToAction'
+import { classesOpen } from './classesOpen'
+import { documentsRequired } from './documentsRequired'
+import { feature } from './feature'
+import { hero } from './hero'
+import { link } from './objects/link'
+import { message } from './message'
+import { stats } from './stats'
+import { updates } from './updates'
+import { whyChoose } from './whyChoose'
 
 export const schemaTypes = [
-  heroType,
-  actionsType,
-  aboutType,
-  academicType,
-  featureItem,
-  whyChooseType,
-  statsType,
-  updatesType,
-  messageType,
-  callToActionType,
+  // Shared Objects
+  accessibleImage,
+  link,
+
+  // Documents & Objects
+  hero,
+  actions,
+  about,
+  academic,
+  feature,
+  whyChoose,
+  stats,
+  updates,
+  message,
+  callToAction,
+  classesOpen,
+  admissionProcess,
+  documentsRequired,
+  admissionGuidelines,
 ]

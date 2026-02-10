@@ -1,6 +1,6 @@
-import {defineType, defineField} from 'sanity'
+import { defineType, defineField } from 'sanity'
 
-export const featureItem = defineType({
+export const feature = defineType({
   name: 'featureItem',
   title: 'Feature Item',
   type: 'object',
@@ -23,7 +23,6 @@ export const featureItem = defineType({
       title: 'Description',
       type: 'text',
       rows: 3,
-      validation: (rule) => rule.required(),
     }),
 
     defineField({
@@ -31,7 +30,26 @@ export const featureItem = defineType({
       title: 'Icon',
       type: 'string',
       description: 'Icon name (e.g., Blocks, BookOpenText, GraduationCap)',
-      validation: (rule) => rule.required(),
+    }),
+
+    defineField({
+      name: 'image',
+      title: 'Image',
+      type: 'accessibleImage',
+      description: 'Optional image if no icon is used',
+    }),
+
+    defineField({
+      name: 'link',
+      title: 'Link',
+      type: 'link',
     }),
   ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'subtitle',
+      media: 'image',
+    },
+  },
 })

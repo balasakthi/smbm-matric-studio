@@ -1,6 +1,6 @@
-import {defineType, defineField, SchemaTypeDefinition} from 'sanity'
+import { defineType, defineField, SchemaTypeDefinition } from 'sanity'
 
-export const messageType: SchemaTypeDefinition = defineType({
+export const message: SchemaTypeDefinition = defineType({
   name: 'messageSection',
   title: 'Message Section',
   type: 'document',
@@ -11,21 +11,16 @@ export const messageType: SchemaTypeDefinition = defineType({
       type: 'string',
       validation: (rule) => rule.required(),
     }),
-    defineField({name: 'description', title: 'Section Description', type: 'text', rows: 4}),
+    defineField({
+      name: 'description',
+      title: 'Section Description',
+      type: 'text',
+      rows: 4,
+    }),
     defineField({
       name: 'image',
       title: 'Correspondent Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative text',
-        },
-      ],
+      type: 'accessibleImage',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -55,11 +50,7 @@ export const messageType: SchemaTypeDefinition = defineType({
     defineField({
       name: 'readMoreAction',
       title: 'Read Full Message Action',
-      type: 'object',
-      fields: [
-        {name: 'label', type: 'string'},
-        {name: 'href', type: 'url'},
-      ],
+      type: 'link',
     }),
   ],
 })

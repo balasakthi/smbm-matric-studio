@@ -1,6 +1,6 @@
-import {defineType, defineField} from 'sanity'
+import { defineType, defineField } from 'sanity'
 
-export const callToActionType = defineType({
+export const callToAction = defineType({
   name: 'callToActionSection',
   title: 'Call To Action Section',
   type: 'document',
@@ -9,11 +9,13 @@ export const callToActionType = defineType({
       name: 'title',
       title: 'Section Title',
       type: 'string',
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'description',
       title: 'Section Description',
       type: 'string',
+      validation: (rule) => rule.required(),
     }),
   ],
 })
