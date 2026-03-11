@@ -2,15 +2,16 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
+import {media} from 'sanity-plugin-media'
 
 export default defineConfig({
   name: 'default',
-  title: 'smbm-matric',
+  title: 'smbm-matric-studio',
 
-  projectId: 'lg6vuu3x',
+  projectId: '1wrpl3se',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [structureTool(), visionTool(), media()],
 
   schema: {
     types: schemaTypes,

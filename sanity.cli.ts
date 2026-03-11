@@ -2,8 +2,8 @@ import {defineCliConfig} from 'sanity/cli'
 
 export default defineCliConfig({
   api: {
-    projectId: 'lg6vuu3x',
-    dataset: 'production',
+    projectId: '1wrpl3se',
+    dataset: 'production'
   },
   deployment: {
     /**
@@ -11,6 +11,5 @@ export default defineCliConfig({
      * Learn more at https://www.sanity.io/docs/studio/latest-version-of-sanity#k47faf43faf56
      */
     autoUpdates: true,
-  },
-  studioHost: 'smbm-matric',
+  }
 })

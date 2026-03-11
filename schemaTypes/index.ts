@@ -1,38 +1,29 @@
-import { about } from './about'
-import { academic } from './academic'
-import { accessibleImage } from './objects/accessibleImage'
-import { actions } from './actions'
-import { admissionGuidelines } from './admissionGuidelines'
-import { admissionProcess } from './admissionProcess'
-import { callToAction } from './callToAction'
-import { classesOpen } from './classesOpen'
-import { documentsRequired } from './documentsRequired'
-import { feature } from './feature'
-import { hero } from './hero'
-import { link } from './objects/link'
-import { message } from './message'
-import { stats } from './stats'
-import { updates } from './updates'
-import { whyChoose } from './whyChoose'
+import {aboutPage} from './aboutPage'
+import {academicLevel} from './academicLevel'
+import {homeHero} from './homeHero'
+import {homeQuickHighlight} from './homeQuickHighlight'
+import {managementMessage} from './managementMessage'
+import {schoolIntroduction} from './schoolIntroduction'
+import {infrastructureHighlight} from './infrastructureHighlight'
+import {studentLife} from './studentLife'
+import {whyChooseSMBM} from './whyChooseSMBM'
+import {ctaBlock} from './ctaBlock'
+import {admissionsPage} from './admissionPage'
+import {academicResult} from './academicResult'
+import {testimonial} from './testimonial'
 
 export const schemaTypes = [
-  // Shared Objects
-  accessibleImage,
-  link,
-
-  // Documents & Objects
-  hero,
-  actions,
-  about,
-  academic,
-  feature,
-  whyChoose,
-  stats,
-  updates,
-  message,
-  callToAction,
-  classesOpen,
-  admissionProcess,
-  documentsRequired,
-  admissionGuidelines,
+  homeHero,
+  homeQuickHighlight,
+  schoolIntroduction,
+  managementMessage,
+  whyChooseSMBM,
+  academicLevel,
+  academicResult,
+  infrastructureHighlight,
+  testimonial,
+  ctaBlock,
+  aboutPage,
+  studentLife,
+  admissionsPage,
 ]
