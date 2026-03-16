@@ -11,6 +11,7 @@ import {ctaBlock} from './ctaBlock'
 import {admissionsPage} from './admissionPage'
 import {academicResult} from './academicResult'
 import {testimonial} from './testimonial'
+import {statsSection} from './statsSection'
 
 export const schemaTypes = [
   homeHero,
@@ -18,6 +19,7 @@ export const schemaTypes = [
   schoolIntroduction,
   managementMessage,
   whyChooseSMBM,
+  statsSection,
   academicLevel,
   academicResult,
   infrastructureHighlight,
