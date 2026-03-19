@@ -1,17 +1,16 @@
 import {aboutPage} from './aboutPage'
 import {academicLevel} from './academicLevel'
+import {academicResult} from './academicResult'
+import {admissionPage} from './admissionPage'
+import {ctaBlock} from './ctaBlock'
 import {homeHero} from './homeHero'
 import {homeQuickHighlight} from './homeQuickHighlight'
+import {infrastructureHighlight} from './infrastructureHighlight'
 import {managementMessage} from './managementMessage'
 import {schoolIntroduction} from './schoolIntroduction'
-import {infrastructureHighlight} from './infrastructureHighlight'
-import {studentLife} from './studentLife'
-import {whyChooseSMBM} from './whyChooseSMBM'
-import {ctaBlock} from './ctaBlock'
-import {admissionsPage} from './admissionPage'
-import {academicResult} from './academicResult'
-import {testimonial} from './testimonial'
 import {statsSection} from './statsSection'
+import {testimonial} from './testimonial'
+import {whyChooseSMBM} from './whyChooseSMBM'
 
 export const schemaTypes = [
   homeHero,
@@ -25,7 +24,6 @@ export const schemaTypes = [
   infrastructureHighlight,
   testimonial,
   ctaBlock,
+  admissionPage,
   aboutPage,
-  studentLife,
-  admissionsPage,
 ]

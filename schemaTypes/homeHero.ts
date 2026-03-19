@@ -39,6 +39,19 @@ export const homeHero = defineType({
     }),
 
     defineField({
+      name: 'admissionText',
+      title: 'Admission Text',
+      type: 'string',
+    }),
+
+    defineField({
+      name: 'admissionOpen',
+      title: 'Admission Open',
+      type: 'boolean',
+      initialValue: false,
+    }),
+
+    defineField({
       name: 'buttonText',
       title: 'Button Text',
       type: 'string',
