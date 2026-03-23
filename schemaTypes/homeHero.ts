@@ -52,22 +52,6 @@ export const homeHero = defineType({
     }),
 
     defineField({
-      name: 'buttonText',
-      title: 'Button Text',
-      type: 'string',
-      description: 'Eg: Admissions Open, Contact Us',
-      validation: (Rule) => Rule.required(),
-    }),
-
-    defineField({
-      name: 'buttonLink',
-      title: 'Button Link',
-      type: 'string',
-      description: 'Eg: /admissions or /contact',
-      validation: (Rule) => Rule.required(),
-    }),
-
-    defineField({
       name: 'backgroundImage',
       title: 'Hero Background Image',
       type: 'image',
