@@ -16,6 +16,11 @@ export const admissionPage = defineType({
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: 'label',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
 
     defineField({
       name: 'backgroundImage',

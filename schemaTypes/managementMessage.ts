@@ -44,11 +44,19 @@ export const managementMessage = defineType({
     }),
 
     defineField({
-      name: 'message',
-      title: 'Message',
-      type: 'text',
-      rows: 12,
-      validation: (Rule) => Rule.required(),
+      name: 'previewMessage',
+      title: 'Preview Message',
+      type: 'array',
+      of: [{type: 'block'}],
+      description: 'Short version (2–3 paragraphs for About page)',
+    }),
+
+    defineField({
+      name: 'fullMessage',
+      title: 'Full Message',
+      type: 'array',
+      of: [{type: 'block'}],
+      validation: (Rule) => Rule.min(1),
     }),
 
     defineField({
@@ -57,6 +65,16 @@ export const managementMessage = defineType({
       type: 'image',
       options: {hotspot: true},
       validation: (Rule) => Rule.required(),
+    }),
+
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'role',
+        maxLength: 96,
+      },
     }),
 
     defineField({
