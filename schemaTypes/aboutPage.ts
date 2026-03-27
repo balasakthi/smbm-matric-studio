@@ -193,128 +193,49 @@ export const aboutPage = defineType({
       ],
     }),
 
-    // 🔷 MESSAGES (VERY IMPORTANT)
+    // 🔷 STUDENT LIFE
     defineField({
-      name: 'messages',
-      title: 'Messages',
+      name: 'studentLife',
+      title: 'Student Life Section',
       type: 'object',
       fields: [
-        {
-          name: 'correspondent',
-          type: 'object',
-          fields: [
-            {name: 'name', type: 'string'},
-            {name: 'role', type: 'string'},
-            {name: 'message', type: 'array', of: [{type: 'block'}]},
-            {name: 'photo', type: 'image', options: {hotspot: true}},
-          ],
-        },
-        {
-          name: 'principal',
-          type: 'object',
-          fields: [
-            {name: 'name', type: 'string'},
-            {name: 'role', type: 'string'},
-            {name: 'message', type: 'array', of: [{type: 'block'}]},
-            {name: 'photo', type: 'image', options: {hotspot: true}},
-          ],
-        },
-        {
-          name: 'vicePrincipal',
-          type: 'object',
-          fields: [
-            {name: 'name', type: 'string'},
-            {name: 'role', type: 'string'},
-            {name: 'message', type: 'array', of: [{type: 'block'}]},
-            {name: 'photo', type: 'image', options: {hotspot: true}},
-          ],
-        },
-      ],
-    }),
-
-    // 🔷 INFRASTRUCTURE
-    defineField({
-      name: 'infrastructure',
-      title: 'Infrastructure',
-      type: 'object',
-      fields: [
-        {name: 'title', type: 'string'},
-        {name: 'description', type: 'array', of: [{type: 'block'}]},
-        {name: 'image', type: 'image', options: {hotspot: true}},
-      ],
-    }),
-
-    // 🔷 TEACHING METHODOLOGY
-    defineField({
-      name: 'teachingMethodology',
-      title: 'Teaching Methodology',
-      type: 'object',
-      fields: [
-        {name: 'title', type: 'string'},
-        {
-          name: 'points',
+        defineField({
+          name: 'title',
+          type: 'string',
+          initialValue: 'Student Life at S.M.B.M.',
+        }),
+        defineField({
+          name: 'description',
+          type: 'text',
+          rows: 3,
+        }),
+        defineField({
+          name: 'items',
+          title: 'Student Life Items',
           type: 'array',
-          of: [{type: 'string'}],
-        },
-      ],
-    }),
-
-    // 🔷 KINDERGARTEN
-    defineField({
-      name: 'kindergarten',
-      title: 'Kindergarten',
-      type: 'object',
-      fields: [
-        {name: 'title', type: 'string'},
-        {name: 'description', type: 'array', of: [{type: 'block'}]},
-      ],
-    }),
-
-    // 🔷 CURRICULUM
-    defineField({
-      name: 'curriculum',
-      title: 'Curriculum',
-      type: 'object',
-      fields: [
-        {name: 'title', type: 'string'},
-        {name: 'description', type: 'array', of: [{type: 'block'}]},
-
-        {
-          name: 'courses',
-          type: 'object',
-          fields: [
+          of: [
             {
-              name: 'higherSecondary',
-              title: 'XI & XII',
-              type: 'array',
-              of: [{type: 'string'}],
-            },
-            {
-              name: 'highSchool',
-              title: 'IX & X',
-              type: 'array',
-              of: [{type: 'string'}],
-            },
-            {
-              name: 'middleSchool',
-              title: 'VI - VIII',
-              type: 'array',
-              of: [{type: 'string'}],
-            },
-            {
-              name: 'primary',
-              title: 'I - V',
-              type: 'array',
-              of: [{type: 'string'}],
-            },
-            {
-              name: 'kindergartenCourses',
-              title: 'KG',
-              type: 'array',
-              of: [{type: 'string'}],
+              type: 'object',
+              fields: [
+                defineField({
+                  name: 'title',
+                  type: 'string',
+                }),
+                defineField({
+                  name: 'description',
+                  type: 'text',
+                  rows: 2,
+                }),
+                defineField({
+                  name: 'image',
+                  type: 'image',
+                  options: {hotspot: true},
+                  fields: [{name: 'alt', type: 'string'}],
+                }),
+              ],
             },
           ],
-        },
+        }),
       ],
     }),
   ],
