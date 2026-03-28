@@ -222,6 +222,10 @@ export const aboutPage = defineType({
                   type: 'string',
                 }),
                 defineField({
+                  name: 'badge',
+                  type: 'string',
+                }),
+                defineField({
                   name: 'description',
                   type: 'text',
                   rows: 2,
