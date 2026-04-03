@@ -11,6 +11,7 @@ import {schoolIntroduction} from './schoolIntroduction'
 import {statsSection} from './statsSection'
 import {testimonial} from './testimonial'
 import {whyChooseSMBM} from './whyChooseSMBM'
+import {academicsPage} from './academicsPage'
 
 export const schemaTypes = [
   homeHero,
@@ -26,4 +27,5 @@ export const schemaTypes = [
   ctaBlock,
   admissionPage,
   aboutPage,
+  academicsPage,
 ]
