@@ -6,22 +6,11 @@ export const academicsPage = defineType({
   type: 'document',
 
   fields: [
-    // 🔷 HERO
+    // HERO
     defineField({
       name: 'hero',
       title: 'Hero Section',
-      type: 'object',
-      fields: [
-        {name: 'label', type: 'string'},
-        {name: 'title', type: 'string', validation: (Rule) => Rule.required()},
-        {name: 'subtitle', type: 'string'},
-        {
-          name: 'backgroundImage',
-          type: 'image',
-          options: {hotspot: true},
-          fields: [{name: 'alt', type: 'string'}],
-        },
-      ],
+      type: 'heroSection',
     }),
 
     // Overview
@@ -40,7 +29,7 @@ export const academicsPage = defineType({
       ],
     }),
 
-    // 🔶 LEARNING APPROACH
+    // LEARNING APPROACH
     defineField({
       name: 'learningApproach',
       title: 'Learning Approach Section',
@@ -108,7 +97,7 @@ export const academicsPage = defineType({
       ],
     }),
 
-    // 🔷 CURRICULUM
+    // CURRICULUM
     defineField({
       name: 'curriculum',
       title: 'Curriculum Section',
@@ -202,7 +191,7 @@ export const academicsPage = defineType({
       ],
     }),
 
-    // 🔶 TEACHING METHODOLOGY
+    // TEACHING METHODOLOGY
     defineField({
       name: 'teachingMethodology',
       title: 'Teaching Methodology',

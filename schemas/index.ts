@@ -1,6 +1,7 @@
 import {aboutPage} from './aboutPage'
 import {academicLevel} from './academicLevel'
 import {academicResult} from './academicResult'
+import {academicsPage} from './academicsPage'
 import {admissionPage} from './admissionPage'
 import {ctaBlock} from './ctaBlock'
 import {homeHero} from './homeHero'
@@ -11,7 +12,9 @@ import {schoolIntroduction} from './schoolIntroduction'
 import {statsSection} from './statsSection'
 import {testimonial} from './testimonial'
 import {whyChooseSMBM} from './whyChooseSMBM'
-import {academicsPage} from './academicsPage'
+
+import {documents} from './documents'
+import {objects} from './objects'
 
 export const schemaTypes = [
   homeHero,
@@ -28,4 +31,6 @@ export const schemaTypes = [
   admissionPage,
   aboutPage,
   academicsPage,
+  ...documents,
+  ...objects,
 ]
