@@ -1,15 +1,15 @@
 import {defineField, defineType} from 'sanity'
 
-export const infrastructureHighlight = defineType({
-  name: 'infrastructureHighlight',
-  title: 'Home Page – Infrastructure Highlights',
-  type: 'document',
+export const whyChooseSMBMSection = defineType({
+  name: 'whyChooseSMBMSection',
+  title: 'Why Choose SMBM Section',
+  type: 'object',
   fields: [
     defineField({
       name: 'title',
       title: 'Section Title',
       type: 'string',
-      initialValue: 'Infrastructure Highlights',
+      initialValue: 'Why Choose SMBM',
       validation: (Rule) => Rule.required(),
     }),
 
@@ -17,21 +17,20 @@ export const infrastructureHighlight = defineType({
       name: 'intro',
       title: 'Short Introduction',
       type: 'string',
-      description: '1 short line under the title',
       validation: (Rule) => Rule.required().max(140),
     }),
 
     defineField({
-      name: 'highlights',
-      title: 'Highlights',
+      name: 'reasons',
+      title: 'Reasons',
       type: 'array',
       of: [
         {
           type: 'object',
           fields: [
             defineField({
-              name: 'name',
-              title: 'Facility Name',
+              name: 'title',
+              title: 'Reason Title',
               type: 'string',
               validation: (Rule) => Rule.required(),
             }),
@@ -42,16 +41,15 @@ export const infrastructureHighlight = defineType({
               validation: (Rule) => Rule.required().max(120),
             }),
             defineField({
-              name: 'image',
-              title: 'Image (optional)',
-              type: 'image',
-              options: {hotspot: true},
-              validation: (Rule) => Rule.required(),
+              name: 'icon',
+              title: 'Icon Name',
+              type: 'string',
+              description: 'Eg: school, book-open, building, users',
             }),
           ],
         },
       ],
-      validation: (Rule) => Rule.min(4).max(8),
+      validation: (Rule) => Rule.min(4).max(6),
     }),
   ],
 })

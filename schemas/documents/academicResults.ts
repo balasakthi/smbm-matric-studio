@@ -1,10 +1,9 @@
-import {defineType, defineField} from 'sanity'
+import {defineField, defineType} from 'sanity'
 
-export const academicResult = defineType({
-  name: 'academicResult',
-  title: 'Academic Results',
+export const academicResults = defineType({
+  name: 'academicResults',
+  title: 'Academic Results Section',
   type: 'document',
-
   fields: [
     defineField({
       name: 'title',
@@ -42,6 +41,13 @@ export const academicResult = defineType({
       type: 'image',
       description: 'Upload the official result banner if available',
       options: {hotspot: true},
+      fields: [
+        defineField({
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+        }),
+      ],
     }),
 
     defineField({
@@ -66,6 +72,13 @@ export const academicResult = defineType({
               title: 'Photo',
               type: 'image',
               options: {hotspot: true},
+              fields: [
+                defineField({
+                  name: 'alt',
+                  type: 'string',
+                  title: 'Alternative text',
+                }),
+              ],
             }),
 
             defineField({
@@ -130,15 +143,4 @@ export const academicResult = defineType({
       ],
     }),
   ],
-
-  preview: {
-    select: {
-      title: 'year',
-    },
-    prepare({title}) {
-      return {
-        title: `Results ${title}`,
-      }
-    },
-  },
 })

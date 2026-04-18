@@ -1,9 +1,9 @@
-import {defineType, defineField} from 'sanity'
+import {defineField, defineType} from 'sanity'
 
-export const homeHero = defineType({
-  name: 'homeHero',
-  title: 'Home Page – Hero Section',
-  type: 'document',
+export const homeHeroSection = defineType({
+  name: 'homeHeroSection',
+  title: 'Home Hero Section',
+  type: 'object',
   fields: [
     defineField({
       name: 'title',
@@ -60,6 +60,13 @@ export const homeHero = defineType({
       },
       description: 'Eg: School campus image',
       validation: (Rule) => Rule.required(),
+      fields: [
+        defineField({
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+        }),
+      ],
     }),
   ],
 })

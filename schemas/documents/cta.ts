@@ -1,8 +1,8 @@
 import {defineField, defineType} from 'sanity'
 
-export const ctaBlock = defineType({
-  name: 'ctaBlock',
-  title: 'Home Page – CTA Block',
+export const CTA = defineType({
+  name: 'cta',
+  title: 'CTA Block Section',
   type: 'document',
   fields: [
     defineField({
@@ -15,7 +15,7 @@ export const ctaBlock = defineType({
 
     defineField({
       name: 'supportLine',
-      title: 'Suppport Line',
+      title: 'Support Line',
       type: 'string',
       validation: (Rule) => Rule.required().max(140),
     }),

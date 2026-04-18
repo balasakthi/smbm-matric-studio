@@ -1,15 +1,15 @@
 import {defineField, defineType} from 'sanity'
 
-export const whyChooseSMBM = defineType({
-  name: 'whyChooseSMBM',
-  title: 'Home Page – Why Choose SMBM',
-  type: 'document',
+export const infrastructureHighlightSection = defineType({
+  name: 'infrastructureHighlightSection',
+  title: 'Infrastructure Highlight Section',
+  type: 'object',
   fields: [
     defineField({
       name: 'title',
       title: 'Section Title',
       type: 'string',
-      initialValue: 'Why Choose SMBM',
+      initialValue: 'Infrastructure Highlights',
       validation: (Rule) => Rule.required(),
     }),
 
@@ -17,20 +17,21 @@ export const whyChooseSMBM = defineType({
       name: 'intro',
       title: 'Short Introduction',
       type: 'string',
+      description: '1 short line under the title',
       validation: (Rule) => Rule.required().max(140),
     }),
 
     defineField({
-      name: 'reasons',
-      title: 'Reasons',
+      name: 'highlights',
+      title: 'Highlights',
       type: 'array',
       of: [
         {
           type: 'object',
           fields: [
             defineField({
-              name: 'title',
-              title: 'Reason Title',
+              name: 'name',
+              title: 'Facility Name',
               type: 'string',
               validation: (Rule) => Rule.required(),
             }),
@@ -41,16 +42,23 @@ export const whyChooseSMBM = defineType({
               validation: (Rule) => Rule.required().max(120),
             }),
             defineField({
-              name: 'icon',
-              title: 'Icon Name',
-              type: 'string',
-              description: 'Eg: school, book-open, building, users',
+              name: 'image',
+              title: 'Image (optional)',
+              type: 'image',
+              options: {hotspot: true},
               validation: (Rule) => Rule.required(),
+              fields: [
+                defineField({
+                  name: 'alt',
+                  type: 'string',
+                  title: 'Alternative text',
+                }),
+              ],
             }),
           ],
         },
       ],
-      validation: (Rule) => Rule.min(4).max(6),
+      validation: (Rule) => Rule.min(4).max(8),
     }),
   ],
 })

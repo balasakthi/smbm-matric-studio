@@ -1,9 +1,9 @@
 import {defineField, defineType} from 'sanity'
 
-export const academicLevel = defineType({
-  name: 'academicLevel',
-  title: 'Home Page – Academic Levels',
-  type: 'document',
+export const academicLevelSection = defineType({
+  name: 'academicLevelSection',
+  title: 'Academic Level Section',
+  type: 'object',
   fields: [
     defineField({
       name: 'title',

@@ -1,9 +1,9 @@
 import {defineField, defineType} from 'sanity'
 
-export const homeQuickHighlight = defineType({
-  name: 'homeQuickHighlight',
-  title: 'Home Page – Quick Highlight',
-  type: 'document',
+export const quickHighlightSection = defineType({
+  name: 'quickHighlightSection',
+  title: 'Quick Highlight Section',
+  type: 'object',
   fields: [
     defineField({
       name: 'title',
@@ -14,7 +14,7 @@ export const homeQuickHighlight = defineType({
 
     defineField({
       name: 'description',
-      title: 'description',
+      title: 'Description',
       type: 'text',
       rows: 3,
       validation: (Rule) => Rule.required().max(120),
@@ -25,7 +25,6 @@ export const homeQuickHighlight = defineType({
       title: 'Icon Name',
       type: 'string',
       description: 'Eg: school, book-open, building, users',
-      validation: (Rule) => Rule.required(),
     }),
 
     defineField({
@@ -34,12 +33,5 @@ export const homeQuickHighlight = defineType({
       type: 'number',
       validation: (Rule) => Rule.required().min(1).max(10),
     }),
-  ],
-  orderings: [
-    {
-      title: 'Order Ascending',
-      name: 'orderAsc',
-      by: [{field: 'order', direction: 'asc'}],
-    },
   ],
 })

@@ -1,9 +1,9 @@
 import {defineField, defineType} from 'sanity'
 
-export const schoolIntroduction = defineType({
-  name: 'schoolIntroduction',
-  title: 'Home Page – School Introduction',
-  type: 'document',
+export const schoolIntroductionSection = defineType({
+  name: 'schoolIntroductionSection',
+  title: 'School Introduction Section',
+  type: 'object',
   fields: [
     defineField({
       name: 'title',
@@ -22,9 +22,9 @@ export const schoolIntroduction = defineType({
     defineField({
       name: 'description',
       title: 'Description',
-      type: 'text',
-      rows: 4,
-      validation: (Rule) => Rule.required(),
+      type: 'array',
+      of: [{type: 'block'}],
+      validation: (Rule) => Rule.min(1),
     }),
 
     defineField({
@@ -33,6 +33,13 @@ export const schoolIntroduction = defineType({
       type: 'image',
       options: {hotspot: true},
       validation: (Rule) => Rule.required(),
+      fields: [
+        defineField({
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+        }),
+      ],
     }),
 
     defineField({

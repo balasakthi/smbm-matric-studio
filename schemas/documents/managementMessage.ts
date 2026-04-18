@@ -65,6 +65,13 @@ export const managementMessage = defineType({
       type: 'image',
       options: {hotspot: true},
       validation: (Rule) => Rule.required(),
+      fields: [
+        defineField({
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+        }),
+      ],
     }),
 
     defineField({
