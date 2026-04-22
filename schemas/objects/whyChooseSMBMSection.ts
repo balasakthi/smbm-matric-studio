@@ -14,7 +14,7 @@ export const whyChooseSMBMSection = defineType({
     }),
 
     defineField({
-      name: 'intro',
+      name: 'subtitle',
       title: 'Short Introduction',
       type: 'string',
       validation: (Rule) => Rule.required().max(140),

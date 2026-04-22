@@ -13,7 +13,7 @@ export const academicResults = defineType({
     }),
 
     defineField({
-      name: 'intro',
+      name: 'subtitle',
       title: 'Short Introduction',
       type: 'string',
       description: '1 short line under the title',

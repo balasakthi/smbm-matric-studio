@@ -7,10 +7,14 @@ export const academicLevelSection = defineType({
   fields: [
     defineField({
       name: 'title',
-      title: 'Section Title',
+      title: 'Title',
       type: 'string',
-      initialValue: 'Academics',
-      validation: (Rule) => Rule.required(),
+    }),
+
+    defineField({
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'string',
     }),
 
     defineField({

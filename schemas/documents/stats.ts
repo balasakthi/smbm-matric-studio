@@ -2,20 +2,14 @@ import {defineField, defineType} from 'sanity'
 
 export const stats = defineType({
   name: 'stats',
-  title: 'Stats Section',
+  title: 'Stats Data',
   type: 'document',
   fields: [
     defineField({
-      name: 'title',
-      title: 'Section Title',
-      type: 'string',
-      initialValue: 'SMBM at a Glance',
-    }),
-
-    defineField({
       name: 'stats',
-      title: 'Stats',
+      title: 'Statistics List',
       type: 'array',
+      description: 'Add up to 4 key statistics to display on the site.',
       of: [
         {
           type: 'object',
@@ -26,22 +20,25 @@ export const stats = defineType({
               type: 'number',
               validation: (Rule) => Rule.required(),
             }),
-
             defineField({
               name: 'suffix',
               title: 'Suffix',
               type: 'string',
               description: 'Example: + or %',
             }),
-
             defineField({
               name: 'label',
               title: 'Label',
               type: 'string',
               validation: (Rule) => Rule.required(),
             }),
+            defineField({
+              name: 'order',
+              title: 'Display Order',
+              type: 'number',
+              validation: (Rule) => Rule.required().min(1).max(10),
+            }),
           ],
-
           preview: {
             select: {
               value: 'value',
@@ -50,15 +47,24 @@ export const stats = defineType({
             },
             prepare({value, suffix, label}) {
               return {
-                title: `${value}${suffix ?? ''}`,
-                subtitle: label,
+                title: `${value}${suffix ?? ''} - ${label}`,
               }
             },
           },
         },
       ],
-
-      validation: (Rule) => Rule.max(4),
+      validation: (Rule) => Rule.required().max(4),
     }),
   ],
+  preview: {
+    select: {
+      stats: 'stats',
+    },
+    prepare({stats}) {
+      return {
+        title: 'Global Statistics',
+        subtitle: `${stats?.length || 0} items defined`,
+      }
+    },
+  },
 })

@@ -14,7 +14,7 @@ export const infrastructureHighlightSection = defineType({
     }),
 
     defineField({
-      name: 'intro',
+      name: 'subtitle',
       title: 'Short Introduction',
       type: 'string',
       description: '1 short line under the title',
@@ -30,8 +30,8 @@ export const infrastructureHighlightSection = defineType({
           type: 'object',
           fields: [
             defineField({
-              name: 'name',
-              title: 'Facility Name',
+              name: 'title',
+              title: 'Facility Title',
               type: 'string',
               validation: (Rule) => Rule.required(),
             }),

@@ -10,6 +10,7 @@ export const homePage = defineType({
       title: 'Hero Section',
       type: 'homeHeroSection',
     }),
+
     defineField({
       name: 'quickHighlights',
       title: 'Quick Highlights',
@@ -17,10 +18,18 @@ export const homePage = defineType({
       of: [{type: 'quickHighlightSection'}],
       validation: (Rule) => Rule.max(4),
     }),
+
     defineField({
       name: 'schoolIntroduction',
       title: 'School Introduction',
       type: 'schoolIntroductionSection',
+    }),
+
+    defineField({
+      name: 'managementMessage',
+      title: 'Correspondent Message',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'managementMessage'}]}],
     }),
 
     defineField({
@@ -30,9 +39,23 @@ export const homePage = defineType({
     }),
 
     defineField({
+      name: 'statsBlock',
+      title: 'Stats Block',
+      type: 'reference',
+      to: [{type: 'stats'}],
+    }),
+
+    defineField({
       name: 'academicLevels',
       title: 'Academic Levels',
       type: 'academicLevelSection',
+    }),
+
+    defineField({
+      name: 'academicResults',
+      title: 'Academic Results',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'academicResults'}]}],
     }),
 
     defineField({
@@ -40,18 +63,39 @@ export const homePage = defineType({
       title: 'Infrastructure Highlights',
       type: 'infrastructureHighlightSection',
     }),
+
     defineField({
       name: 'testimonials',
       title: 'Testimonials',
-      type: 'array',
-      of: [{type: 'reference', to: [{type: 'testimonial'}]}],
-      validation: (Rule) => Rule.max(6),
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Section Title',
+          type: 'string',
+          validation: (Rule) => Rule.required().max(40),
+        }),
+        defineField({
+          name: 'subtitle',
+          title: 'Section Subtitle',
+          type: 'string',
+          validation: (Rule) => Rule.required().max(80),
+        }),
+        defineField({
+          name: 'testimonialsList',
+          title: 'Testimonials List',
+          type: 'array',
+          of: [{type: 'reference', to: [{type: 'testimonial'}]}],
+          validation: (Rule) => Rule.max(6),
+        }),
+      ],
     }),
+
     defineField({
       name: 'ctaBlock',
       title: 'Call to Action Block',
-      type: 'array',
-      of: [{type: 'reference', to: [{type: 'cta'}]}],
+      type: 'reference',
+      to: [{type: 'cta'}],
     }),
   ],
   preview: {

@@ -48,15 +48,14 @@ export const testimonial = defineType({
       title: 'Photo',
       type: 'image',
       options: {hotspot: true},
-      description: 'Optional alumni photo',
-    }),
-
-    defineField({
-      name: 'featured',
-      title: 'Show on Homepage',
-      type: 'boolean',
-      initialValue: false,
-      description: 'Enable to show this testimonial on the homepage',
+      description: 'Optional alumini photo',
+      fields: [
+        defineField({
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+        }),
+      ],
     }),
   ],
 
