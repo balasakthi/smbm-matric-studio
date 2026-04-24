@@ -17,15 +17,28 @@ export const heritageSectionType = defineType({
       title: 'Title',
       type: 'string',
       initialValue: 'Dindigul Nadar Uravinmurai',
-      description: 'Main section title',
+      description: 'Section title',
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
+      name: 'subtitle',
+      title: 'subtitle',
       type: 'string',
-      initialValue: 'Empowering Education & Society Since 1964',
-      description: 'Subtitle for the heritage section',
+      description: 'Section subtitle',
     }),
+
+    defineField({
+      name: 'image',
+      type: 'image',
+      options: {hotspot: true},
+      fields: [
+        defineField({
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+        }),
+      ],
+    }),
+
     defineField({name: 'aphorism', title: 'Aphorism', type: 'string'}),
     defineField({
       name: 'leadershipMission',

@@ -10,6 +10,6 @@ export const missionVisionSectionType = defineType({
     defineField({name: 'mission', type: 'array', of: [{type: 'block'}]}),
     defineField({name: 'vision', type: 'array', of: [{type: 'block'}]}),
     defineField({name: 'coreValues', type: 'string'}),
-    defineField({name: 'quote', type: 'string'}),
+    defineField({name: 'missionStatement', type: 'string'}),
   ],
 })

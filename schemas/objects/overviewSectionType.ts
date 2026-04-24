@@ -6,6 +6,7 @@ export const overviewSectionType = defineType({
   type: 'object',
   fields: [
     defineField({name: 'title', type: 'string', validation: (Rule) => Rule.required()}),
+    defineField({name: 'subtitle', type: 'string'}),
     defineField({
       name: 'content',
       type: 'array',

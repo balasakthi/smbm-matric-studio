@@ -11,7 +11,13 @@ export const studentLifeSectionType = defineType({
       type: 'string',
       initialValue: 'Student Life at S.M.B.M.',
     }),
-    defineField({name: 'description', title: 'Description', type: 'text', rows: 3}),
+
+    defineField({
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'string',
+    }),
+
     defineField({
       name: 'items',
       title: 'Student Life Items',
