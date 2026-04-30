@@ -50,7 +50,7 @@ export const heritageSectionType = defineType({
       name: 'leadership',
       title: 'Leadership Team',
       type: 'array',
-      of: [{type: 'leader'}], // references the extracted type by name
+      of: [{type: 'leader'}],
     }),
     defineField({name: 'coreFocus', title: 'Core Focus', type: 'coreFocus'}),
     defineField({

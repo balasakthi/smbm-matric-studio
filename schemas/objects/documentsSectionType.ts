@@ -6,7 +6,11 @@ export const documentsSectionType = defineType({
   type: 'object',
   fields: [
     defineField({name: 'title', title: 'Title', type: 'string'}),
-    defineField({name: 'intro', title: 'Intro', type: 'string'}),
+    defineField({
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'string',
+    }),
     defineField({
       name: 'documents',
       title: 'Documents',

@@ -12,11 +12,9 @@ export const processSectionType = defineType({
       validation: (Rule) => Rule.required().error('Process title is required.'),
     }),
     defineField({
-      name: 'intro',
-      title: 'Intro',
+      name: 'subtitle',
+      title: 'Subtitle',
       type: 'string',
-      validation: (Rule) =>
-        Rule.required().max(140).error('Intro is required and must be under 140 characters.'),
     }),
     defineField({
       name: 'steps',

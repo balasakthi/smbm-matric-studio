@@ -1,8 +1,8 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
-export const overviewSectionType = defineType({
-  name: 'overviewSection',
-  title: 'Overview Section',
+export const academicsOverviewSectionType = defineType({
+  name: 'academicsOverviewSection',
+  title: 'Academics Overview Section',
   type: 'object',
   fields: [
     defineField({name: 'title', type: 'string', validation: (Rule) => Rule.required()}),
@@ -10,7 +10,7 @@ export const overviewSectionType = defineType({
     defineField({
       name: 'content',
       type: 'array',
-      of: [defineArrayMember({type: 'block'})],
+      of: [{type: 'block'}],
       validation: (Rule) => Rule.required(),
     }),
     defineField({
@@ -18,6 +18,13 @@ export const overviewSectionType = defineType({
       type: 'image',
       options: {hotspot: true},
       fields: [{name: 'alt', type: 'string'}],
+    }),
+    defineField({
+      name: 'highlights',
+      title: 'Academic highlights',
+      type: 'array',
+      of: [defineArrayMember({type: 'string'})],
+      description: 'Highlights specific to the academics page',
     }),
   ],
 })

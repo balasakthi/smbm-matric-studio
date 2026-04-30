@@ -26,18 +26,20 @@ export const academicLevelSection = defineType({
           type: 'object',
           fields: [
             defineField({
-              name: 'levelName',
-              title: 'Level Name',
+              name: 'title',
+              title: 'Title',
               type: 'string',
               validation: (Rule) => Rule.required(),
             }),
+
             defineField({
-              name: 'shortDescription',
-              title: 'Short Description',
+              name: 'description',
+              title: 'Description',
               type: 'string',
               description: '1-line only',
               validation: (Rule) => Rule.required().max(120),
             }),
+
             defineField({
               name: 'icon',
               title: 'Icon Name',

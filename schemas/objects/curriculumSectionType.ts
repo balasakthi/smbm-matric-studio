@@ -13,10 +13,14 @@ export const curriculumSectionType = defineType({
     }),
     defineField({name: 'subtitle', title: 'Subtitle', type: 'string'}),
     defineField({
-      name: 'levels',
-      title: 'Levels',
+      name: 'groups',
+      title: 'Curriculum Groups',
       type: 'array',
-      of: [defineArrayMember({type: 'curriculumLevel'})],
+      of: [
+        defineArrayMember({type: 'kgGroup'}),
+        defineArrayMember({type: 'standardGroup'}),
+        defineArrayMember({type: 'higherSecondaryGroup'}),
+      ],
     }),
   ],
 })

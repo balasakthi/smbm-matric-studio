@@ -1,9 +1,9 @@
 import {academicLevelSection} from './academicLevelSection'
+import {academicsOverviewSectionType} from './academicsOverviewSectionType'
 import {admissionOverviewSectionType} from './admissionOverviewSectionType'
 import {approachPointType} from './approachPointType'
 import {contactSectionType} from './contactSectionType'
 import {coreFocusType} from './coreFocusType'
-import {curriculumLevelType} from './curriculumLevelType'
 import {curriculumSectionType} from './curriculumSectionType'
 import {documentItemType} from './documentItemType'
 import {documentsSectionType} from './documentsSectionType'
@@ -16,7 +16,6 @@ import {heroSection} from './heroSection'
 import {homeHeroSection} from './homeHeroSection'
 import {quickHighlightSection} from './quickHighlightSection'
 import {infrastructureHighlightSection} from './infrastructureHighlightSection'
-import {kindergartenSectionType} from './kindergartenSectionType'
 import {leaderType} from './leaderType'
 import {learningApproachSectionType} from './learningApproachSectionType'
 import {missionVisionSectionType} from './missionVisionSectionType'
@@ -34,16 +33,22 @@ import {teachingMethodologySectionType} from './teachingMethodologySectionType'
 import {whyChooseSMBMSection} from './whyChooseSMBMSection'
 import {classesSectionType} from './classesSectionType'
 import {classItemType} from './classItemType'
+import {kindergartenSectionType} from './kindergartenSectionType'
+
+import {kgGroup} from './group/kgGroup'
+import {standardGroup} from './group/standardGroup'
+import {higherSecondaryGroup} from './group/higherSecodaryGroup'
+import {contentBlockType} from './contentBlockType'
 
 export const objects = [
   academicLevelSection,
+  academicsOverviewSectionType,
   admissionOverviewSectionType,
   approachPointType,
   contactSectionType,
   classItemType,
   classesSectionType,
   coreFocusType,
-  curriculumLevelType,
   curriculumSectionType,
   documentItemType,
   documentsSectionType,
@@ -54,9 +59,9 @@ export const objects = [
   heritageSectionType,
   heroSection,
   homeHeroSection,
+  kindergartenSectionType,
   quickHighlightSection,
   infrastructureHighlightSection,
-  kindergartenSectionType,
   leaderType,
   learningApproachSectionType,
   missionVisionSectionType,
@@ -72,4 +77,8 @@ export const objects = [
   studentLifeSectionType,
   teachingMethodologySectionType,
   whyChooseSMBMSection,
+  kgGroup,
+  standardGroup,
+  higherSecondaryGroup,
+  contentBlockType,
 ]

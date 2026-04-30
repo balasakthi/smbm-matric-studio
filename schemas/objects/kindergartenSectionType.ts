@@ -1,22 +1,23 @@
-import {defineArrayMember, defineField, defineType} from 'sanity'
+import {defineField, defineType} from 'sanity'
 
 export const kindergartenSectionType = defineType({
   name: 'kindergartenSection',
   title: 'Kindergarten Section',
   type: 'object',
   fields: [
+    defineField({name: 'title', title: 'Title', type: 'string'}),
+    defineField({name: 'subtitle', title: 'Subtitle', type: 'string'}),
     defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-      initialValue: 'Kindergarten',
+      name: 'image',
+      type: 'image',
+      options: {hotspot: true},
+      fields: [{name: 'alt', type: 'string'}],
     }),
     defineField({
-      name: 'content',
-      title: 'Content',
+      name: 'sections',
+      title: 'Content Sections',
       type: 'array',
-      of: [defineArrayMember({type: 'block'})],
-      validation: (Rule) => Rule.min(1),
+      of: [{type: 'contentBlock'}],
     }),
   ],
 })

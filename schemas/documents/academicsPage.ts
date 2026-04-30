@@ -6,18 +6,25 @@ export const academicsPage = defineType({
   type: 'document',
   fields: [
     defineField({name: 'hero', title: 'Hero Section', type: 'heroSection'}),
-    defineField({name: 'overview', title: 'Overview Section', type: 'overviewSection'}),
+    defineField({name: 'overview', title: 'Overview Section', type: 'academicsOverviewSection'}),
     defineField({
       name: 'learningApproach',
       title: 'Learning Approach Section',
       type: 'learningApproachSection',
     }),
-    defineField({name: 'kindergarten', title: 'Kindergarten', type: 'kindergartenSection'}),
-    defineField({name: 'curriculum', title: 'Curriculum Section', type: 'curriculumSection'}),
     defineField({
       name: 'teachingMethodology',
       title: 'Teaching Methodology',
       type: 'teachingMethodologySection',
+    }),
+
+    defineField({name: 'kindergarten', title: 'Kindergarten', type: 'kindergartenSection'}),
+    defineField({name: 'curriculum', title: 'Curriculum Section', type: 'curriculumSection'}),
+    defineField({
+      name: 'ctaBlock',
+      title: 'Call to Action Block',
+      type: 'reference',
+      to: [{type: 'cta'}],
     }),
   ],
   preview: {
