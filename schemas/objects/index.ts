@@ -1,8 +1,14 @@
+import {ctaBlockType} from './common/ctaBlockType'
+import {highlightItemsType} from './common/highlightItemsType'
+
 import {academicLevelSection} from './academicLevelSection'
 import {academicsOverviewSectionType} from './academicsOverviewSectionType'
-import {admissionOverviewSectionType} from './admissionOverviewSectionType'
+import {applicationFormSection} from './sections/applicationFormSection'
 import {approachPointType} from './approachPointType'
+import {classItemType} from './classItemType'
+import {classesSectionType} from './classesSectionType'
 import {contactSectionType} from './contactSectionType'
+import {contentBlockType} from './contentBlockType'
 import {coreFocusType} from './coreFocusType'
 import {curriculumSectionType} from './curriculumSectionType'
 import {documentItemType} from './documentItemType'
@@ -13,42 +19,39 @@ import {formSectionType} from './formSectionType'
 import {guidelinesSectionType} from './guidelinesSectionType'
 import {heritageSectionType} from './heritageSectionType'
 import {heroSection} from './heroSection'
+import {higherSecondaryGroup} from './group/higherSecodaryGroup'
 import {homeHeroSection} from './homeHeroSection'
-import {quickHighlightSection} from './quickHighlightSection'
 import {infrastructureHighlightSection} from './infrastructureHighlightSection'
+import {kgGroup} from './group/kgGroup'
+import {kindergartenSectionType} from './kindergartenSectionType'
 import {leaderType} from './leaderType'
 import {learningApproachSectionType} from './learningApproachSectionType'
 import {missionVisionSectionType} from './missionVisionSectionType'
-import {officeHoursType} from './officeHoursType'
 import {overviewSectionType} from './overviewSectionType'
 import {processSectionType} from './processSectionType'
 import {processStepType} from './processStepType'
+import {quickHighlightSection} from './quickHighlightSection'
 import {schoolIntroductionSection} from './schoolIntroductionSection'
 import {schoolType} from './schoolType'
 import {socialVisionType} from './socialVisionType'
-import {streamType} from './streamType'
+import {standardGroup} from './group/standardGroup'
 import {studentLifeItemType} from './studentLifeItemType'
 import {studentLifeSectionType} from './studentLifeSectionType'
 import {teachingMethodologySectionType} from './teachingMethodologySectionType'
 import {whyChooseSMBMSection} from './whyChooseSMBMSection'
-import {classesSectionType} from './classesSectionType'
-import {classItemType} from './classItemType'
-import {kindergartenSectionType} from './kindergartenSectionType'
-
-import {kgGroup} from './group/kgGroup'
-import {standardGroup} from './group/standardGroup'
-import {higherSecondaryGroup} from './group/higherSecodaryGroup'
-import {contentBlockType} from './contentBlockType'
+import {whyJoinSMBMSectionType} from './sections/whyJoinSMBMSection'
 
 export const objects = [
   academicLevelSection,
   academicsOverviewSectionType,
-  admissionOverviewSectionType,
+  applicationFormSection,
   approachPointType,
-  contactSectionType,
   classItemType,
   classesSectionType,
+  contactSectionType,
+  contentBlockType,
   coreFocusType,
+  ctaBlockType,
   curriculumSectionType,
   documentItemType,
   documentsSectionType,
@@ -58,27 +61,26 @@ export const objects = [
   guidelinesSectionType,
   heritageSectionType,
   heroSection,
+  higherSecondaryGroup,
+  highlightItemsType,
   homeHeroSection,
-  kindergartenSectionType,
-  quickHighlightSection,
   infrastructureHighlightSection,
+  kgGroup,
+  kindergartenSectionType,
   leaderType,
   learningApproachSectionType,
   missionVisionSectionType,
-  officeHoursType,
   overviewSectionType,
   processSectionType,
   processStepType,
+  quickHighlightSection,
   schoolIntroductionSection,
   schoolType,
   socialVisionType,
-  streamType,
+  standardGroup,
   studentLifeItemType,
   studentLifeSectionType,
   teachingMethodologySectionType,
   whyChooseSMBMSection,
-  kgGroup,
-  standardGroup,
-  higherSecondaryGroup,
-  contentBlockType,
+  whyJoinSMBMSectionType,
 ]

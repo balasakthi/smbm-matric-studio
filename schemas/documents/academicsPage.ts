@@ -19,12 +19,13 @@ export const academicsPage = defineType({
     }),
 
     defineField({name: 'kindergarten', title: 'Kindergarten', type: 'kindergartenSection'}),
+
     defineField({name: 'curriculum', title: 'Curriculum Section', type: 'curriculumSection'}),
+
     defineField({
       name: 'ctaBlock',
-      title: 'Call to Action Block',
-      type: 'reference',
-      to: [{type: 'cta'}],
+      title: 'Academics Page CTA Block',
+      type: 'ctaBlock',
     }),
   ],
   preview: {

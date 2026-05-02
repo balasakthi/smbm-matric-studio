@@ -90,12 +90,10 @@ export const homePage = defineType({
         }),
       ],
     }),
-
     defineField({
       name: 'ctaBlock',
-      title: 'Call to Action Block',
-      type: 'reference',
-      to: [{type: 'cta'}],
+      title: 'Home Page CTA Block',
+      type: 'ctaBlock',
     }),
   ],
   preview: {
