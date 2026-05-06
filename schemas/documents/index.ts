@@ -9,6 +9,9 @@ import {homePage} from './homePage'
 import {managementMessage} from './managementMessage'
 import {stats} from './stats'
 import {testimonial} from './testimonial'
+import {galleryPageType} from './galleryPageType'
+import {categoryType} from './gallery/categoryType'
+import {galleryType} from './gallery/galleryType'
 
 export const documents = [
   homePage,
@@ -22,4 +25,7 @@ export const documents = [
   managementMessage,
   stats,
   academicResults,
+  galleryPageType,
+  categoryType,
+  galleryType,
 ]

@@ -40,6 +40,7 @@ import {studentLifeSectionType} from './studentLifeSectionType'
 import {teachingMethodologySectionType} from './teachingMethodologySectionType'
 import {whyChooseSMBMSection} from './whyChooseSMBMSection'
 import {whyJoinSMBMSectionType} from './sections/whyJoinSMBMSection'
+import {gallerySectionType} from './sections/gallerySectionType'
 
 export const objects = [
   academicLevelSection,
@@ -83,4 +84,5 @@ export const objects = [
   teachingMethodologySectionType,
   whyChooseSMBMSection,
   whyJoinSMBMSectionType,
+  gallerySectionType,
 ]
