@@ -42,13 +42,14 @@ export const galleryType = defineType({
       of: [
         defineArrayMember({
           type: 'image',
+          name: 'image',
           options: {hotspot: true},
           fields: [
-            {
+            defineField({
               name: 'alt',
               type: 'string',
               title: 'Alt Text',
-            },
+            }),
           ],
         }),
       ],

@@ -14,6 +14,7 @@ export const managementMessage = defineType({
           {title: 'Correspondent', value: 'correspondent'},
           {title: 'Principal', value: 'principal'},
           {title: 'Vice Principal', value: 'vicePrincipal'},
+          {title: 'President', value: 'president'},
         ],
         layout: 'radio',
       },
@@ -33,6 +34,21 @@ export const managementMessage = defineType({
       type: 'string',
       description: 'Eg: Correspondent, Principal',
       validation: (Rule) => Rule.required(),
+    }),
+
+    defineField({
+      name: 'photo',
+      title: 'Photo',
+      type: 'image',
+      options: {hotspot: true},
+      validation: (Rule) => Rule.required(),
+      fields: [
+        defineField({
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+        }),
+      ],
     }),
 
     defineField({
@@ -57,21 +73,6 @@ export const managementMessage = defineType({
       type: 'array',
       of: [{type: 'block'}],
       validation: (Rule) => Rule.min(1),
-    }),
-
-    defineField({
-      name: 'photo',
-      title: 'Photo',
-      type: 'image',
-      options: {hotspot: true},
-      validation: (Rule) => Rule.required(),
-      fields: [
-        defineField({
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative text',
-        }),
-      ],
     }),
 
     defineField({

@@ -1,17 +1,19 @@
-import {academicResults} from './academicResults'
 import {aboutPage} from './aboutPage'
+import {academicResults} from './academicResults'
 import {academicsPage} from './academicsPage'
 import {admissionPage} from './admissionPage'
 import {careersPage} from './careersPage'
+import {categoryType} from './gallery/categoryType'
 import {contactInfo} from './contactInfo'
 import {contactPage} from './contactPage'
+import {galleryPageType} from './galleryPageType'
+import {galleryType} from './gallery/galleryType'
 import {homePage} from './homePage'
+import {leadershipMemberType} from './leadershipMemberType'
+import {leadershipPageType} from './leadershipPageType'
 import {managementMessage} from './managementMessage'
 import {stats} from './stats'
 import {testimonial} from './testimonial'
-import {galleryPageType} from './galleryPageType'
-import {categoryType} from './gallery/categoryType'
-import {galleryType} from './gallery/galleryType'
 
 export const documents = [
   homePage,
@@ -20,12 +22,14 @@ export const documents = [
   admissionPage,
   careersPage,
   contactPage,
+  galleryPageType,
+  leadershipPageType,
+  academicResults,
+  categoryType,
   contactInfo,
-  testimonial,
+  galleryType,
+  leadershipMemberType,
   managementMessage,
   stats,
-  academicResults,
-  galleryPageType,
-  categoryType,
-  galleryType,
+  testimonial,
 ]
