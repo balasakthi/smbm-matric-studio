@@ -1,9 +1,13 @@
+import {InfoOutlineIcon} from '@sanity/icons'
+
 import {defineField, defineType} from 'sanity'
 
 export const aboutPage = defineType({
   name: 'aboutPage',
   title: 'About Page',
   type: 'document',
+  icon: InfoOutlineIcon,
+
   fields: [
     defineField({name: 'hero', title: 'Hero Section', type: 'heroSection'}),
 
@@ -18,10 +22,10 @@ export const aboutPage = defineType({
     defineField({name: 'heritage', title: 'Heritage Section', type: 'heritageSection'}),
 
     defineField({
-      name: 'managementMessage',
-      title: 'Principle Message',
+      name: 'leadershipMessage',
+      title: 'Principal Message',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'managementMessage'}]}],
+      of: [{type: 'reference', to: [{type: 'leadershipMember'}]}],
     }),
 
     defineField({name: 'studentLife', title: 'Student Life Section', type: 'studentLifeSection'}),

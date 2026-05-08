@@ -30,10 +30,10 @@ export const homePage = defineType({
     }),
 
     defineField({
-      name: 'managementMessage',
+      name: 'leadershipMessage',
       title: 'Correspondent Message',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'managementMessage'}]}],
+      of: [{type: 'reference', to: [{type: 'leadershipMember'}]}],
     }),
 
     defineField({
