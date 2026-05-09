@@ -93,6 +93,15 @@ export const leadershipMemberType = defineType({
     }),
 
     defineField({
+      name: 'heroSubtitle',
+      title: 'Hero Subtitle',
+      type: 'text',
+      rows: 2,
+      description: 'Short supporting text shown below the leadership page title.',
+      hidden: ({document}) => !document?.featured,
+    }),
+
+    defineField({
       name: 'highlightQuote',
       title: 'Highlight Quote',
       type: 'string',
