@@ -1,7 +1,7 @@
 import {defineField, defineType} from 'sanity'
 
-export const categoryType = defineType({
-  name: 'category',
+export const galleryCategoryType = defineType({
+  name: 'galleryCategory',
   title: 'Gallery Main Category',
   type: 'document',
   fields: [

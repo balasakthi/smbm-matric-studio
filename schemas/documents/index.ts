@@ -3,9 +3,9 @@ import {academicResults} from './academicResults'
 import {academicsPage} from './academicsPage'
 import {admissionPage} from './admissionPage'
 import {careersPage} from './careersPage'
-import {categoryType} from './gallery/categoryType'
 import {contactInfo} from './contactInfo'
 import {contactPage} from './contactPage'
+import {galleryCategoryType} from './gallery/galleryCategory'
 import {galleryPageType} from './galleryPageType'
 import {galleryType} from './gallery/galleryType'
 import {homePage} from './homePage'
@@ -24,9 +24,9 @@ export const documents = [
   galleryPageType,
   leadershipPageType,
   academicResults,
-  categoryType,
   contactInfo,
   galleryType,
+  galleryCategoryType,
   leadershipMemberType,
   stats,
   testimonial,

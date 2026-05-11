@@ -4,6 +4,15 @@ export const galleryType = defineType({
   name: 'gallery',
   title: 'Gallery',
   type: 'document',
+
+  preview: {
+    select: {
+      title: 'title',
+      media: 'thumbnail',
+      subtitle: 'galleryCategory.title',
+    },
+  },
+
   fields: [
     defineField({
       name: 'title',
@@ -14,10 +23,10 @@ export const galleryType = defineType({
     }),
 
     defineField({
-      name: 'category',
+      name: 'galleryCategory',
       title: 'Main Category',
       type: 'reference',
-      to: [{type: 'category'}],
+      to: [{type: 'galleryCategory'}],
       validation: (Rule) => Rule.required(),
     }),
 
@@ -62,12 +71,4 @@ export const galleryType = defineType({
       type: 'number',
     }),
   ],
-
-  preview: {
-    select: {
-      title: 'title',
-      media: 'thumbnail',
-      subtitle: 'category.title',
-    },
-  },
 })
