@@ -1,9 +1,20 @@
 import {defineField, defineType} from 'sanity'
+import {AddUserIcon} from '@sanity/icons'
 
 export const admissionPage = defineType({
   name: 'admissionPage',
   title: 'Admission Page',
   type: 'document',
+  icon: AddUserIcon,
+
+  preview: {
+    select: {
+      title: 'hero.title',
+      subtitle: 'hero.subtitle',
+      media: 'hero.backgroundImage',
+    },
+  },
+
   fields: [
     defineField({name: 'hero', title: 'Hero Section', type: 'heroSection'}),
     defineField({name: 'overview', title: 'Overview Section', type: 'overviewSection'}),
@@ -17,11 +28,4 @@ export const admissionPage = defineType({
     }),
     defineField({name: 'contactSection', title: 'Contact Section', type: 'contactSection'}),
   ],
-  preview: {
-    select: {
-      title: 'hero.title',
-      subtitle: 'hero.subtitle',
-      media: 'hero.backgroundImage',
-    },
-  },
 })

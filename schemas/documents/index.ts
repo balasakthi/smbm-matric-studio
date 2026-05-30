@@ -11,6 +11,7 @@ import {galleryType} from './gallery/galleryType'
 import {homePage} from './homePage'
 import {leadershipMemberType} from './leadershipMemberType'
 import {leadershipPageType} from './leadershipPageType'
+import {rulesAndRegulations} from './rulesAndRegulationsType'
 import {stats} from './stats'
 import {testimonial} from './testimonial'
 
@@ -23,6 +24,7 @@ export const documents = [
   contactPage,
   galleryPageType,
   leadershipPageType,
+  rulesAndRegulations,
   academicResults,
   contactInfo,
   galleryType,

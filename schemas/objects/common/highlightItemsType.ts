@@ -28,8 +28,8 @@ export const highlightItemsType = defineType({
           name: 'description',
           title: 'Description',
           type: 'string',
-          description: 'Brief explanation of the feature or benefit (max 120 chars).',
-          validation: (Rule) => Rule.required().max(120),
+          description: 'Brief explanation of the feature or benefit (max 200 chars).',
+          validation: (Rule) => Rule.required().max(200),
         }),
 
         defineField({

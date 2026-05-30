@@ -1,9 +1,20 @@
 import {defineField, defineType} from 'sanity'
+import {CaseIcon} from '@sanity/icons'
 
 export const careersPage = defineType({
   name: 'careersPage',
   title: 'Careers Page',
   type: 'document',
+  icon: CaseIcon,
+
+  preview: {
+    select: {
+      title: 'hero.title',
+      subtitle: 'hero.subtitle',
+      media: 'hero.backgroundImage',
+    },
+  },
+
   fields: [
     defineField({name: 'hero', title: 'Hero Section', type: 'heroSection'}),
 
@@ -21,11 +32,4 @@ export const careersPage = defineType({
       type: 'ctaBlock',
     }),
   ],
-  preview: {
-    select: {
-      title: 'hero.title',
-      subtitle: 'hero.subtitle',
-      media: 'hero.backgroundImage',
-    },
-  },
 })
